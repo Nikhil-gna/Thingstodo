@@ -126,8 +126,6 @@ app.post("/delete",function(req,res){
 //creating coustom list using express
 app.get("/:coustomList",function(req,res){
   const coustomlistname=_.capitalize (req.params.coustomList);
-
-
   List.findOne({name:coustomlistname},function(err,Foundlist){
     if(!err){
       if(!Foundlist){
